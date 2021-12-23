@@ -10,7 +10,7 @@ internal class InputGameController : BaseController
         _view.Init(leftMove, rightMove, car.Speed);
     }
 
-    private readonly ResourcesPath _viewPath = new ResourcesPath { PathResources = "Prefabs/gyroscopeMove" };
+    private readonly ResourcesPath _viewPath = new ResourcesPath { PathResources = "Prefabs/endlessMove" };
     private BaseInputView _view;
 
     private BaseInputView LoadView()

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MainMenuController : BaseController
 {
-    private readonly ResourcesPath _viewPath = new ResourcesPath { PathResources = "Prefabs / MainMenu" };
+    private readonly ResourcesPath _viewPath = new ResourcesPath { PathResources = "Prefabs/MainMenu" };
     private readonly ProfilePlayer _profilePlayer;
     private readonly MainMenuView _mainMenuView;
 
@@ -24,5 +24,9 @@ public class MainMenuController : BaseController
     private void StartGame()
     {
         _profilePlayer.CurrentState.Value = GameState.Game;
+
+        _profilePlayer.AnalyticTools.SendMessage("StartGame");
+
+        _profilePlayer.AdsShower.ShowBanner();
     }
 }
