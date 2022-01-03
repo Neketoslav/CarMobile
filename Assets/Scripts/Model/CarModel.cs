@@ -2,12 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CarModel 
+public class CarModel : IUpgradableCar
 {
-    public float Speed { get; }
+    public float defaultSpeed { get; }
+    public float Speed { get; set ; }
 
     public CarModel(float speed)
     {
-        Speed = speed;
+        defaultSpeed = speed;
+        Restore();
+    }
+
+    public void Restore()
+    {
+        Speed = defaultSpeed;
     }
 }
