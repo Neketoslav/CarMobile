@@ -46,7 +46,6 @@ public class InventoryController : BaseController, IInventoryController
     {
         
         var objectView = Object.Instantiate(ResourcesLoader.LoadPrefab(_slotViewPath), spawnPosition, false);
-      //  AddGameObject(objectView);
         objectView.TryGetComponent<SlotView>(out var slotView);
 
         return slotView;
