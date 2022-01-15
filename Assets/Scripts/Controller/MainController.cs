@@ -16,9 +16,11 @@ public class MainController : BaseController
     private MainMenuController _mainMenuController;
     private GameController _gameController;
     private InventoryController _inventoryController;
+    private AbilityController _abilityController;
     private readonly Transform _placeForUi;
     private readonly ProfilePlayer _profilePlayer;
     private readonly List<ItemConfig> _itemConfigs;
+    private readonly List<AbilityItemConfig> _abilityConfigs;
 
     protected override void OnDispose()
     {
@@ -39,6 +41,9 @@ public class MainController : BaseController
             case GameState.Game:
                 _inventoryController = new InventoryController(_placeForUi, _itemConfigs);
                 _inventoryController.ShowInventory();
+
+                _abilityController = new AbilityController(_placeForUi, _abilityConfigs);
+                _abilityController.ShowAbilities();
 
                 _gameController = new GameController(_profilePlayer);
                 _mainMenuController?.Dispose();
