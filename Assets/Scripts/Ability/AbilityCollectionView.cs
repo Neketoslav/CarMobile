@@ -1,10 +1,12 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AbilityCollectionView : MonoBehaviour, IAbilityCollectionView
 {
+    [SerializeField] private GameObject _abilityScreen;
+
     public event Action<IItem> UseRequesed;
 
     private IReadOnlyList<IItem> _abilityItems;
@@ -13,16 +15,15 @@ public class AbilityCollectionView : MonoBehaviour, IAbilityCollectionView
     {
         UseRequesed.Invoke(item);
     }
-    public void Show()
+    public void Show( )
     {
-
+        Debug.Log("show");
+        Debug.Log(_abilityScreen);
+        _abilityScreen.gameObject.SetActive(true);
     }
-    public void Display(IReadOnlyList<IItem> abilityItems)
+    public void Hide()
     {
-        _abilityItems = abilityItems;
-        foreach (var item in abilityItems)
-        {
-            Debug.Log(item.Info.Title);
-        }
+        Debug.Log("hide");
+        _abilityScreen.SetActive(false);
     }
 }

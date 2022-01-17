@@ -7,5 +7,5 @@ public interface IAbilityCollectionView
 {
     event Action<IItem> UseRequesed;
     void Show();
-    void Display(IReadOnlyList<IItem> abilityItems);
+    void Hide();
 }

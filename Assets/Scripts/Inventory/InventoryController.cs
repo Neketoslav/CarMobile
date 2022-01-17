@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Object = UnityEngine.Object;
@@ -37,15 +35,15 @@ public class InventoryController : BaseController, IInventoryController
 
         foreach (var item in equippedItem)
         {           
-            var itemView = ShowItem(_inventoryView._itemsSlot);
+            var itemView = ShowItem();
             itemView.Init(item);
         }
 
     }
-    private SlotView ShowItem(Transform spawnPosition)
+    private SlotView ShowItem()
     {
         
-        var objectView = Object.Instantiate(ResourcesLoader.LoadPrefab(_slotViewPath), spawnPosition, false);
+        var objectView = Object.Instantiate(ResourcesLoader.LoadPrefab(_slotViewPath), _placeForUi, false);
         objectView.TryGetComponent<SlotView>(out var slotView);
 
         return slotView;

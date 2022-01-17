@@ -160,6 +160,8 @@ MonoBehaviour:
   _itemConfigs:
   - {fileID: 11400000, guid: 7bac25869ac1d794aa526cc06145ae24, type: 2}
   - {fileID: 11400000, guid: fd5a931988bf2e841925ced0e7467908, type: 2}
+  _abilityItemConfigs:
+  - {fileID: 11400000, guid: 5f802181407626541a713a5614e7155b, type: 2}
 --- !u!114 &382832936
 MonoBehaviour:
   m_ObjectHideFlags: 0

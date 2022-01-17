@@ -1,14 +1,14 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MainController : BaseController
 {
-    public MainController(Transform placeForUi, ProfilePlayer profilePlayer, List<ItemConfig> itemConfigs)
+    public MainController(Transform placeForUi, ProfilePlayer profilePlayer, List<ItemConfig> itemConfigs, List<AbilityItemConfig> abilityItemConfigs)
     {
         _profilePlayer = profilePlayer;
         _placeForUi = placeForUi;
         _itemConfigs = itemConfigs;
+        _abilityConfigs = abilityItemConfigs;
         OnChangeGameState(_profilePlayer.CurrentState.Value);
         profilePlayer.CurrentState.SubscribeOnChange(OnChangeGameState);
     }
@@ -43,7 +43,6 @@ public class MainController : BaseController
                 _inventoryController.ShowInventory();
 
                 _abilityController = new AbilityController(_placeForUi, _abilityConfigs);
-                _abilityController.ShowAbilities();
 
                 _gameController = new GameController(_profilePlayer);
                 _mainMenuController?.Dispose();
