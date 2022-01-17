@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d779a1e05a70fa49a205857b4d68521, type: 3}
+  m_Name: SpeedUpTire
+  m_EditorClassIdentifier: 
+  _itemConfig: {fileID: 11400000, guid: 7bac25869ac1d794aa526cc06145ae24, type: 2}
+  _upgradeType: 1
+  _valueUpdate: 20
