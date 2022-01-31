@@ -162,6 +162,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fd5a931988bf2e841925ced0e7467908, type: 2}
   _abilityItemConfigs:
   - {fileID: 11400000, guid: 5f802181407626541a713a5614e7155b, type: 2}
+  _dailyRewardView: {fileID: 4096681006933984512, guid: 1bfcb455dee07414382b0ab3a70c03b1, type: 3}
+  _currencyView: {fileID: 4267718515269577032, guid: 89cab23f9c2a85342ac4b1b98a0d9c1b, type: 3}
+  _fightWindowView: {fileID: 7649470713315541889, guid: 7d808bba46b724b4a91ccbcf3427fe89, type: 3}
+  _startFightView: {fileID: -2268583937241737089, guid: c904ee92253a82b41b9660e45d56ae70, type: 3}
 --- !u!114 &382832936
 MonoBehaviour:
   m_ObjectHideFlags: 0

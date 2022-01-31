@@ -11,13 +11,21 @@ public class Root : MonoBehaviour
 
     [SerializeField] private AbilityItemConfig[] _abilityItemConfigs;
 
+    [SerializeField] private DailyRewardView _dailyRewardView;
+
+    [SerializeField] private CurrencyView _currencyView;
+
+    [SerializeField] private FightWindowView _fightWindowView;
+
+    [SerializeField] private StartFightView _startFightView;
+
     private MainController _mainController;
 
     private void Awake()
     {
         var profilePlayer = new ProfilePlayer(15f, _unityAdsTools);
         profilePlayer.CurrentState.Value = GameState.Start;
-        _mainController = new MainController(_placeForUi, profilePlayer, _itemConfigs.ToList(), _abilityItemConfigs.ToList());
+        _mainController = new MainController(_placeForUi, profilePlayer, _itemConfigs.ToList(), _abilityItemConfigs.ToList(), _dailyRewardView, _currencyView, _fightWindowView, _startFightView);
     }
 
     protected void OnDestroy()

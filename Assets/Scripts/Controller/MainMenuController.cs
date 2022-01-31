@@ -10,8 +10,9 @@ public class MainMenuController : BaseController
     {
         _profilePlayer = profilePlayer;
         _mainMenuView = LoadView(placeForUi);
-        _mainMenuView.Init(StartGame);
+        _mainMenuView.Init(StartGame, DailyRewardGame);
     }
+
 
     private MainMenuView LoadView(Transform placeForUi)
     {
@@ -28,5 +29,9 @@ public class MainMenuController : BaseController
         _profilePlayer.AnalyticTools.SendMessage("StartGame");
 
         _profilePlayer.AdsShower.ShowBanner();
+    }
+    private void DailyRewardGame()
+    {
+        _profilePlayer.CurrentState.Value = GameState.DailyReward;
     }
 }
